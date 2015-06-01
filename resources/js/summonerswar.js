@@ -110,7 +110,10 @@ $("#episode-nav").html(Handlebars.compile($("#tp-episode-nav").html())(data));
 $("#episodes").html(Handlebars.compile($("#tp-episodes").html())(data));
 
 jQuery(function () {
-  $(window).on('load', function () {
+  var $window = $(window);
+  var skipScrollEvent = false;
+  var currentEpIdx = 0;
+  $window.on('load', function () {
     setTimeout(function () {
       $('html, body').scrollTop(0);
     }, 0);
@@ -121,6 +124,8 @@ jQuery(function () {
       .tooltip('update');
   };
   var updateEpisodeNavs = function (selectedIdx) {
+    skipScrollEvent = false;
+    currentEpIdx = selectedIdx;
     $episodeList.removeClass('on')
       .eq(selectedIdx)
       .addClass('on');
@@ -147,16 +152,18 @@ jQuery(function () {
   };
 
   var scrollToEpisode = function (idx) {
-    var $window = $(window),
-      $targetEl = $('#ep-' + idx),
+    var $targetEl = $('#ep-' + idx),
       scrollTop = $targetEl.offset().top;
 
     scrollTop = Math.min(scrollTop || 0, document.body.scrollHeight - $window.height());
     var distance = Math.ceil(Math.abs($window.scrollTop() - scrollTop)),
       duration = Math.min(distance ? Math.max(distance * 0.45, 450) : 0, 2000);
 
+    skipScrollEvent = true;
     $html.animate({scrollTop : scrollTop}, { duration : duration, easing : 'easeInOutQuad'})
-      .promise().done(function () {updateEpisodeNavs(idx);});
+      .promise().done(function () {
+        updateEpisodeNavs(idx);
+      });
   };
 
   var $episodeNavs = $('.ep-nav > a')
@@ -171,4 +178,29 @@ jQuery(function () {
 
   $episodeList.tooltip({container : '#smart-view'});
   updateEpisodeNavs(0);
+
+  var $episodes = $('.episode');
+  var onScroll = function() {
+    if(skipScrollEvent) {
+      return;
+    }
+    var startOfViewPort = $window.scrollTop();
+    var selectedIdx = 0;
+    var weight = $window.height()  / 2;
+    $episodes.each(function(i, el) {
+      var $el = $(el),
+        top = $el.offset().top,
+        bottom = top + $el.height();
+
+      if ((top - weight) < startOfViewPort && bottom > startOfViewPort) {
+        selectedIdx = $el.data('idx');
+      }
+    });
+
+    updateEpisodeNavs(selectedIdx);
+  };
+
+  if ($('body').hasClass('desktop')) {
+    $window.on('scroll', onScroll);
+  }
 });
