@@ -2,23 +2,29 @@
 <html>
 <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# comicpanda: http://ogp.me/ns/fb/comicpanda#" itemscope itemtype="http://schema.org/Article">
     <title>Summoners War | Tapastic Comics</title>
-    <meta name="description" content="TODO"/>
+    <meta name="description" content="A notorious summoner with a criminal record and a mysterious past...a fluke of a monster from a summoning gone wrong... There are two players in the story, but only one goal: to steal the Summoner's Crystal!
+Unspeakable power! All the riches of the world! And...the ability to bring back the dead? What would YOU wish for?
+An original story based off the hit game, Summoner's War."/>
     <meta property="og:type" content="comicpanda:webcomic_series"/>
     <meta property="og:title" content="Summoners War | Tapastic Comics"/>
-    <meta property="og:image" content="http://aws.tapastic.com/images/es/96/dd4db34bac00d497ef0c206384712c81.png"/>
+    <meta property="og:image" content="resources/img/sw-cover.png"/>
     <meta property="og:description" content="TODO"/>
-    <meta itemprop="name" content="Summoners War :: Prologue | Tapastic Comics">
-    <meta itemprop="description" content="">
-    <meta itemprop="image" content="http://aws.tapastic.com/images/es/96/dd4db34bac00d497ef0c206384712c81.png">
+    <meta itemprop="name" content="Summoners War | Tapastic Comics">
+    <meta itemprop="description" content="A notorious summoner with a criminal record and a mysterious past...a fluke of a monster from a summoning gone wrong... There are two players in the story, but only one goal: to steal the Summoner's Crystal!
+Unspeakable power! All the riches of the world! And...the ability to bring back the dead? What would YOU wish for?
+An original story based off the hit game, Summoner's War.">
+    <meta itemprop="image" content="resources/img/sw-cover.png">
 
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@tapastic">
-    <meta name="twitter:title" content="Summoners War :: Prologue | Tapastic Comics">
-    <meta name="twitter:description" content="">
-    <meta name="twitter:image:src" content="http://aws.tapastic.com/images/es/96/dd4db34bac00d497ef0c206384712c81.png">
+    <meta name="twitter:title" content="Summoners War | Tapastic Comics">
+    <meta name="twitter:description" content="A notorious summoner with a criminal record and a mysterious past...a fluke of a monster from a summoning gone wrong... There are two players in the story, but only one goal: to steal the Summoner's Crystal!
+Unspeakable power! All the riches of the world! And...the ability to bring back the dead? What would YOU wish for?
+An original story based off the hit game, Summoner's War.">
+    <meta name="twitter:image:src" content="resources/img/sw-cover.png">
     <meta name="twitter:domain" content="tapastic.com">
 
-    <link rel="image_src" href="http://aws.tapastic.com/images/es/96/dd4db34bac00d497ef0c206384712c81.png"/>
+    <link rel="image_src" href="resources/img/sw-cover.png"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
     <meta charset="utf-8"/>
     <meta name="keywords" content="webcomics, onilne comics, visual stories, graphic novels, webcomic, online comic"/>
@@ -29,13 +35,15 @@
     <meta property="og:url" content="http://tapastic.com/summonerswar">
     <meta name="viewport" content="width=device-width,initial-scale=1,minimal-ui"/>
     <link href="http://tapastic.com/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
-    <link rel="apple-touch-icon" href="http://d2894izlucyd11.cloudfront.net/resources/images/tapastic-touch-icon.png">
     <link rel="stylesheet" type="text/css" href="resources/css/style.min.css" media="screen"/>
 </head>
 <body>
 <nav class="nav">
+    <a href="http://tapastic.com" class="logo">
+      <i class="sp sp-nav-hatguy"></i><i class="sp sp-nav-tapastic"><u class="txt">tapastic</u></i>
+    </a>
     <a href="http://ad-x.co.uk/API/click/C0mT41614MV/am554c97ed71d795" class="play-link">
-        play summoners war <i class=""></i><i class=""></i>
+        play summoners war <i class="sp sp-nav-android"></i><i class="sp sp-nav-ios"></i>
     </a>
 </nav>
 <div id="smart-view">
@@ -45,19 +53,22 @@
         <div id="episodes" class="clearfix"></div>
     </div>
     <div id="ep-first-nav" class="ep-nav first-ep">
-        <a href="#!/first-episode" class="first" data-toggle="tooltip" data-placement="left" data-html="true">
-            <i class="sp-next-ep ico-firstep"></i>
-            <img width="50" height="50" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==">
+        <a href="#!/first-episode" class="first" data-idx="0" data-indicator="first"
+          data-toggle="tooltip" data-placement="left" data-html="true">
+            <i class="sp sp-ep-first"></i>
+            <img width="50" height="50" src="resources/img/thumbs/ep0.png">
         </a>
     </div>
     <div id="ep-nav" class="ep-nav">
-        <a href="#!/prev-episode" class="prev" data-toggle="tooltip" data-placement="left" data-html="true">
-            <i class="sp-next-ep ico-prevep"></i>
-            <img width="50" height="50" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==">
+        <a href="#!/prev-episode" class="prev hidden" data-idx="0" data-indicator="prev"
+          data-toggle="tooltip" data-placement="left" data-html="true">
+            <i class="sp sp-ep-prev"></i>
+            <img width="50" height="50" src="resources/img/thumbs/ep0.png">
         </a>
-        <a href="#!/next-episode" class="next" data-placement="left" data-html="true">
-            <i class="sp-next-ep ico-nextep"></i>
-            <img width="50" height="50" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==">
+        <a href="#!/next-episode" class="next" data-idx="1" data-indicator="next"
+          data-placement="left" data-html="true">
+            <i class="sp sp-ep-next"></i>
+            <img width="50" height="50" src="resources/img/thumbs/ep1.png">
         </a>
     </div>
 </div>
@@ -65,26 +76,36 @@
 <footer class="page-footer">
     <ul class="social-links">
         <li>
-            <a href="https://www.facebook.com/tapastic"><i class="sp-footer footer-fb"></i></a>
+            <a href="https://www.facebook.com/tapastic" target="_blank">
+              <i class="sp sp-foot-fb"></i>
+            </a>
         </li>
         <li>
-            <a href="https://twitter.com/tapastic"><i class="sp-footer footer-twitter"></i></a>
+            <a href="https://twitter.com/tapastic" target="_blank">
+              <i class="sp sp-foot-twit"></i>
+            </a>
         </li>
         <li>
-            <a href="http://instagram.com/tapastic"><i class="sp-footer footer-insta"></i></a>
+            <a href="http://instagram.com/tapastic" target="_blank">
+              <i class="sp sp-foot-insta"></i>
+            </a>
         </li>
         <li>
-            <a href="https://play.google.com/store/apps/details?id=com.tapastic"><i class="sp-footer footer-android"></i></a>
+            <a href="https://play.google.com/store/apps/details?id=com.tapastic" target="_blank">
+              <i class="sp sp-foot-andy"></i>
+            </a>
         </li>
         <li>
-            <a href="https://itunes.apple.com/us/app/tapastic/id578836126?mt=8"><i class="sp-footer footer-ios"></i></a>
+            <a href="https://itunes.apple.com/us/app/tapastic/id578836126?mt=8" target="_blank">
+              <i class="sp sp-foot-ios"></i>
+            </a>
         </li>
     </ul>
     <p class="copy">&copy;2015 Tapas Media, Inc.</p>
 </footer>
 <script id="tp-episodes" type="text/x-handlebars-template">
     {{#each episodes}}
-        <div class="episode" id="episode-{{@index}}">
+        <div class="episode" id="ep-{{@index}}">
             <header class="ep-header">
                 <h1 class="title">{{title}}</h1>
             </header>
@@ -98,6 +119,10 @@
             <a href="{{bannerHref}}" class="banner">
                 <img class="banner-img {{bannerCss}}" src="resources/img/{{bannerSrc}}" alt="banner">
             </a>
+            <div class="store-links {{bannerCss}}">
+              <a href="{{playgooge}}"><img src="resources/img/btn-android.png" alt="google play"></a>
+              <a  href="{{appstore}}"><img src="resources/img/btn-ios.png" alt="itunes"></a>
+            </div>
         </div>
     {{/each}}
 </script>
@@ -105,9 +130,9 @@
     <ul id="episode-list">
         {{#each episodes}}
         <li>
-            <a href="#!/go-episode"
+            <a href="#ep-{{@index}}"
               class="go-episode {{#if @first}}on{{/if}}"
-              data-target="episode-{{@index}}"
+              data-idx="{{@index}}"
               data-title="{{title}}"
               data-placement="right">
                 <img class="banner-img" src="resources/img/thumbs/{{thumbSrc}}" alt="{{title}} - thumbnail" width="50" height="50">

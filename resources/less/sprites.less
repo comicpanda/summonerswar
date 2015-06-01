@@ -1,0 +1,418 @@
+/*
+LESS variables are information about icon's compiled state, stored under its original file name
+
+.icon-home {
+  width: @icon-home-width;
+}
+
+The large array-like variables contain all information about a single icon
+@icon-home: x y offset_x offset_y width height total_width total_height image_path name;
+
+At the bottom of this section, we provide information about the spritesheet itself
+@spritesheet: width height image @spritesheet-sprites;
+*/
+@sp-ep-first-name: sp-ep-first;
+@sp-ep-first-x: 44px;
+@sp-ep-first-y: 68px;
+@sp-ep-first-offset-x: -44px;
+@sp-ep-first-offset-y: -68px;
+@sp-ep-first-width: 20px;
+@sp-ep-first-height: 20px;
+@sp-ep-first-total-width: 110px;
+@sp-ep-first-total-height: 110px;
+@sp-ep-first-image: '../img/sprites.png';
+@sp-ep-first: 44px 68px -44px -68px 20px 20px 110px 110px '../img/sprites.png' sp-ep-first;
+@sp-ep-next-name: sp-ep-next;
+@sp-ep-next-x: 22px;
+@sp-ep-next-y: 68px;
+@sp-ep-next-offset-x: -22px;
+@sp-ep-next-offset-y: -68px;
+@sp-ep-next-width: 20px;
+@sp-ep-next-height: 20px;
+@sp-ep-next-total-width: 110px;
+@sp-ep-next-total-height: 110px;
+@sp-ep-next-image: '../img/sprites.png';
+@sp-ep-next: 22px 68px -22px -68px 20px 20px 110px 110px '../img/sprites.png' sp-ep-next;
+@sp-ep-prev-name: sp-ep-prev;
+@sp-ep-prev-x: 88px;
+@sp-ep-prev-y: 68px;
+@sp-ep-prev-offset-x: -88px;
+@sp-ep-prev-offset-y: -68px;
+@sp-ep-prev-width: 20px;
+@sp-ep-prev-height: 20px;
+@sp-ep-prev-total-width: 110px;
+@sp-ep-prev-total-height: 110px;
+@sp-ep-prev-image: '../img/sprites.png';
+@sp-ep-prev: 88px 68px -88px -68px 20px 20px 110px 110px '../img/sprites.png' sp-ep-prev;
+@sp-foot-andy-name: sp-foot-andy;
+@sp-foot-andy-x: 60px;
+@sp-foot-andy-y: 34px;
+@sp-foot-andy-offset-x: -60px;
+@sp-foot-andy-offset-y: -34px;
+@sp-foot-andy-width: 20px;
+@sp-foot-andy-height: 20px;
+@sp-foot-andy-total-width: 110px;
+@sp-foot-andy-total-height: 110px;
+@sp-foot-andy-image: '../img/sprites.png';
+@sp-foot-andy: 60px 34px -60px -34px 20px 20px 110px 110px '../img/sprites.png' sp-foot-andy;
+@sp-foot-fb-name: sp-foot-fb;
+@sp-foot-fb-x: 82px;
+@sp-foot-fb-y: 34px;
+@sp-foot-fb-offset-x: -82px;
+@sp-foot-fb-offset-y: -34px;
+@sp-foot-fb-width: 20px;
+@sp-foot-fb-height: 20px;
+@sp-foot-fb-total-width: 110px;
+@sp-foot-fb-total-height: 110px;
+@sp-foot-fb-image: '../img/sprites.png';
+@sp-foot-fb: 82px 34px -82px -34px 20px 20px 110px 110px '../img/sprites.png' sp-foot-fb;
+@sp-foot-insta-name: sp-foot-insta;
+@sp-foot-insta-x: 0px;
+@sp-foot-insta-y: 68px;
+@sp-foot-insta-offset-x: 0px;
+@sp-foot-insta-offset-y: -68px;
+@sp-foot-insta-width: 20px;
+@sp-foot-insta-height: 20px;
+@sp-foot-insta-total-width: 110px;
+@sp-foot-insta-total-height: 110px;
+@sp-foot-insta-image: '../img/sprites.png';
+@sp-foot-insta: 0px 68px 0px -68px 20px 20px 110px 110px '../img/sprites.png' sp-foot-insta;
+@sp-foot-ios-name: sp-foot-ios;
+@sp-foot-ios-x: 22px;
+@sp-foot-ios-y: 90px;
+@sp-foot-ios-offset-x: -22px;
+@sp-foot-ios-offset-y: -90px;
+@sp-foot-ios-width: 20px;
+@sp-foot-ios-height: 20px;
+@sp-foot-ios-total-width: 110px;
+@sp-foot-ios-total-height: 110px;
+@sp-foot-ios-image: '../img/sprites.png';
+@sp-foot-ios: 22px 90px -22px -90px 20px 20px 110px 110px '../img/sprites.png' sp-foot-ios;
+@sp-foot-twit-name: sp-foot-twit;
+@sp-foot-twit-x: 34px;
+@sp-foot-twit-y: 34px;
+@sp-foot-twit-offset-x: -34px;
+@sp-foot-twit-offset-y: -34px;
+@sp-foot-twit-width: 24px;
+@sp-foot-twit-height: 20px;
+@sp-foot-twit-total-width: 110px;
+@sp-foot-twit-total-height: 110px;
+@sp-foot-twit-image: '../img/sprites.png';
+@sp-foot-twit: 34px 34px -34px -34px 24px 20px 110px 110px '../img/sprites.png' sp-foot-twit;
+@sp-nav-android-name: sp-nav-android;
+@sp-nav-android-x: 66px;
+@sp-nav-android-y: 68px;
+@sp-nav-android-offset-x: -66px;
+@sp-nav-android-offset-y: -68px;
+@sp-nav-android-width: 20px;
+@sp-nav-android-height: 20px;
+@sp-nav-android-total-width: 110px;
+@sp-nav-android-total-height: 110px;
+@sp-nav-android-image: '../img/sprites.png';
+@sp-nav-android: 66px 68px -66px -68px 20px 20px 110px 110px '../img/sprites.png' sp-nav-android;
+@sp-nav-hatguy-name: sp-nav-hatguy;
+@sp-nav-hatguy-x: 0px;
+@sp-nav-hatguy-y: 34px;
+@sp-nav-hatguy-offset-x: 0px;
+@sp-nav-hatguy-offset-y: -34px;
+@sp-nav-hatguy-width: 32px;
+@sp-nav-hatguy-height: 32px;
+@sp-nav-hatguy-total-width: 110px;
+@sp-nav-hatguy-total-height: 110px;
+@sp-nav-hatguy-image: '../img/sprites.png';
+@sp-nav-hatguy: 0px 34px 0px -34px 32px 32px 110px 110px '../img/sprites.png' sp-nav-hatguy;
+@sp-nav-ios-name: sp-nav-ios;
+@sp-nav-ios-x: 0px;
+@sp-nav-ios-y: 90px;
+@sp-nav-ios-offset-x: 0px;
+@sp-nav-ios-offset-y: -90px;
+@sp-nav-ios-width: 20px;
+@sp-nav-ios-height: 20px;
+@sp-nav-ios-total-width: 110px;
+@sp-nav-ios-total-height: 110px;
+@sp-nav-ios-image: '../img/sprites.png';
+@sp-nav-ios: 0px 90px 0px -90px 20px 20px 110px 110px '../img/sprites.png' sp-nav-ios;
+@sp-nav-tapastic-name: sp-nav-tapastic;
+@sp-nav-tapastic-x: 0px;
+@sp-nav-tapastic-y: 0px;
+@sp-nav-tapastic-offset-x: 0px;
+@sp-nav-tapastic-offset-y: 0px;
+@sp-nav-tapastic-width: 110px;
+@sp-nav-tapastic-height: 32px;
+@sp-nav-tapastic-total-width: 110px;
+@sp-nav-tapastic-total-height: 110px;
+@sp-nav-tapastic-image: '../img/sprites.png';
+@sp-nav-tapastic: 0px 0px 0px 0px 110px 32px 110px 110px '../img/sprites.png' sp-nav-tapastic;
+@sp-ep-first-2x-name: sp-ep-first-2x;
+@sp-ep-first-2x-x: 88px;
+@sp-ep-first-2x-y: 136px;
+@sp-ep-first-2x-offset-x: -88px;
+@sp-ep-first-2x-offset-y: -136px;
+@sp-ep-first-2x-width: 40px;
+@sp-ep-first-2x-height: 40px;
+@sp-ep-first-2x-total-width: 220px;
+@sp-ep-first-2x-total-height: 220px;
+@sp-ep-first-2x-image: '../img/sprites-2x.png';
+@sp-ep-first-2x: 88px 136px -88px -136px 40px 40px 220px 220px '../img/sprites-2x.png' sp-ep-first-2x;
+@sp-ep-next-2x-name: sp-ep-next-2x;
+@sp-ep-next-2x-x: 44px;
+@sp-ep-next-2x-y: 136px;
+@sp-ep-next-2x-offset-x: -44px;
+@sp-ep-next-2x-offset-y: -136px;
+@sp-ep-next-2x-width: 40px;
+@sp-ep-next-2x-height: 40px;
+@sp-ep-next-2x-total-width: 220px;
+@sp-ep-next-2x-total-height: 220px;
+@sp-ep-next-2x-image: '../img/sprites-2x.png';
+@sp-ep-next-2x: 44px 136px -44px -136px 40px 40px 220px 220px '../img/sprites-2x.png' sp-ep-next-2x;
+@sp-ep-prev-2x-name: sp-ep-prev-2x;
+@sp-ep-prev-2x-x: 176px;
+@sp-ep-prev-2x-y: 136px;
+@sp-ep-prev-2x-offset-x: -176px;
+@sp-ep-prev-2x-offset-y: -136px;
+@sp-ep-prev-2x-width: 40px;
+@sp-ep-prev-2x-height: 40px;
+@sp-ep-prev-2x-total-width: 220px;
+@sp-ep-prev-2x-total-height: 220px;
+@sp-ep-prev-2x-image: '../img/sprites-2x.png';
+@sp-ep-prev-2x: 176px 136px -176px -136px 40px 40px 220px 220px '../img/sprites-2x.png' sp-ep-prev-2x;
+@sp-foot-andy-2x-name: sp-foot-andy-2x;
+@sp-foot-andy-2x-x: 120px;
+@sp-foot-andy-2x-y: 68px;
+@sp-foot-andy-2x-offset-x: -120px;
+@sp-foot-andy-2x-offset-y: -68px;
+@sp-foot-andy-2x-width: 40px;
+@sp-foot-andy-2x-height: 40px;
+@sp-foot-andy-2x-total-width: 220px;
+@sp-foot-andy-2x-total-height: 220px;
+@sp-foot-andy-2x-image: '../img/sprites-2x.png';
+@sp-foot-andy-2x: 120px 68px -120px -68px 40px 40px 220px 220px '../img/sprites-2x.png' sp-foot-andy-2x;
+@sp-foot-fb-2x-name: sp-foot-fb-2x;
+@sp-foot-fb-2x-x: 164px;
+@sp-foot-fb-2x-y: 68px;
+@sp-foot-fb-2x-offset-x: -164px;
+@sp-foot-fb-2x-offset-y: -68px;
+@sp-foot-fb-2x-width: 40px;
+@sp-foot-fb-2x-height: 40px;
+@sp-foot-fb-2x-total-width: 220px;
+@sp-foot-fb-2x-total-height: 220px;
+@sp-foot-fb-2x-image: '../img/sprites-2x.png';
+@sp-foot-fb-2x: 164px 68px -164px -68px 40px 40px 220px 220px '../img/sprites-2x.png' sp-foot-fb-2x;
+@sp-foot-insta-2x-name: sp-foot-insta-2x;
+@sp-foot-insta-2x-x: 0px;
+@sp-foot-insta-2x-y: 136px;
+@sp-foot-insta-2x-offset-x: 0px;
+@sp-foot-insta-2x-offset-y: -136px;
+@sp-foot-insta-2x-width: 40px;
+@sp-foot-insta-2x-height: 40px;
+@sp-foot-insta-2x-total-width: 220px;
+@sp-foot-insta-2x-total-height: 220px;
+@sp-foot-insta-2x-image: '../img/sprites-2x.png';
+@sp-foot-insta-2x: 0px 136px 0px -136px 40px 40px 220px 220px '../img/sprites-2x.png' sp-foot-insta-2x;
+@sp-foot-ios-2x-name: sp-foot-ios-2x;
+@sp-foot-ios-2x-x: 44px;
+@sp-foot-ios-2x-y: 180px;
+@sp-foot-ios-2x-offset-x: -44px;
+@sp-foot-ios-2x-offset-y: -180px;
+@sp-foot-ios-2x-width: 40px;
+@sp-foot-ios-2x-height: 40px;
+@sp-foot-ios-2x-total-width: 220px;
+@sp-foot-ios-2x-total-height: 220px;
+@sp-foot-ios-2x-image: '../img/sprites-2x.png';
+@sp-foot-ios-2x: 44px 180px -44px -180px 40px 40px 220px 220px '../img/sprites-2x.png' sp-foot-ios-2x;
+@sp-foot-twit-2x-name: sp-foot-twit-2x;
+@sp-foot-twit-2x-x: 68px;
+@sp-foot-twit-2x-y: 68px;
+@sp-foot-twit-2x-offset-x: -68px;
+@sp-foot-twit-2x-offset-y: -68px;
+@sp-foot-twit-2x-width: 48px;
+@sp-foot-twit-2x-height: 40px;
+@sp-foot-twit-2x-total-width: 220px;
+@sp-foot-twit-2x-total-height: 220px;
+@sp-foot-twit-2x-image: '../img/sprites-2x.png';
+@sp-foot-twit-2x: 68px 68px -68px -68px 48px 40px 220px 220px '../img/sprites-2x.png' sp-foot-twit-2x;
+@sp-nav-android-2x-name: sp-nav-android-2x;
+@sp-nav-android-2x-x: 132px;
+@sp-nav-android-2x-y: 136px;
+@sp-nav-android-2x-offset-x: -132px;
+@sp-nav-android-2x-offset-y: -136px;
+@sp-nav-android-2x-width: 40px;
+@sp-nav-android-2x-height: 40px;
+@sp-nav-android-2x-total-width: 220px;
+@sp-nav-android-2x-total-height: 220px;
+@sp-nav-android-2x-image: '../img/sprites-2x.png';
+@sp-nav-android-2x: 132px 136px -132px -136px 40px 40px 220px 220px '../img/sprites-2x.png' sp-nav-android-2x;
+@sp-nav-hatguy-2x-name: sp-nav-hatguy-2x;
+@sp-nav-hatguy-2x-x: 0px;
+@sp-nav-hatguy-2x-y: 68px;
+@sp-nav-hatguy-2x-offset-x: 0px;
+@sp-nav-hatguy-2x-offset-y: -68px;
+@sp-nav-hatguy-2x-width: 64px;
+@sp-nav-hatguy-2x-height: 64px;
+@sp-nav-hatguy-2x-total-width: 220px;
+@sp-nav-hatguy-2x-total-height: 220px;
+@sp-nav-hatguy-2x-image: '../img/sprites-2x.png';
+@sp-nav-hatguy-2x: 0px 68px 0px -68px 64px 64px 220px 220px '../img/sprites-2x.png' sp-nav-hatguy-2x;
+@sp-nav-ios-2x-name: sp-nav-ios-2x;
+@sp-nav-ios-2x-x: 0px;
+@sp-nav-ios-2x-y: 180px;
+@sp-nav-ios-2x-offset-x: 0px;
+@sp-nav-ios-2x-offset-y: -180px;
+@sp-nav-ios-2x-width: 40px;
+@sp-nav-ios-2x-height: 40px;
+@sp-nav-ios-2x-total-width: 220px;
+@sp-nav-ios-2x-total-height: 220px;
+@sp-nav-ios-2x-image: '../img/sprites-2x.png';
+@sp-nav-ios-2x: 0px 180px 0px -180px 40px 40px 220px 220px '../img/sprites-2x.png' sp-nav-ios-2x;
+@sp-nav-tapastic-2x-name: sp-nav-tapastic-2x;
+@sp-nav-tapastic-2x-x: 0px;
+@sp-nav-tapastic-2x-y: 0px;
+@sp-nav-tapastic-2x-offset-x: 0px;
+@sp-nav-tapastic-2x-offset-y: 0px;
+@sp-nav-tapastic-2x-width: 220px;
+@sp-nav-tapastic-2x-height: 64px;
+@sp-nav-tapastic-2x-total-width: 220px;
+@sp-nav-tapastic-2x-total-height: 220px;
+@sp-nav-tapastic-2x-image: '../img/sprites-2x.png';
+@sp-nav-tapastic-2x: 0px 0px 0px 0px 220px 64px 220px 220px '../img/sprites-2x.png' sp-nav-tapastic-2x;
+@sp-width: 110px;
+@sp-height: 110px;
+@sp-image: '../img/sprites.png';
+@sp-sprites: @sp-ep-first @sp-ep-next @sp-ep-prev @sp-foot-andy @sp-foot-fb @sp-foot-insta @sp-foot-ios @sp-foot-twit @sp-nav-android @sp-nav-hatguy @sp-nav-ios @sp-nav-tapastic;
+@sp: 110px 110px '../img/sprites.png' @sp-sprites;
+@retina-spritesheet-width: 220px;
+@retina-spritesheet-height: 220px;
+@retina-spritesheet-image: '../img/sprites-2x.png';
+@retina-spritesheet-sprites: @sp-ep-first-2x @sp-ep-next-2x @sp-ep-prev-2x @sp-foot-andy-2x @sp-foot-fb-2x @sp-foot-insta-2x @sp-foot-ios-2x @sp-foot-twit-2x @sp-nav-android-2x @sp-nav-hatguy-2x @sp-nav-ios-2x @sp-nav-tapastic-2x;
+@retina-spritesheet: 220px 220px '../img/sprites-2x.png' @retina-spritesheet-sprites;
+
+/*
+These "retina group" variables are mappings for the naming and pairing of normal and retina sprites.
+
+The list formatted variables are intended for mixins like `retina-sprite` and `retina-sprites`.
+*/
+@sp-ep-first-group-name: sp-ep-first;
+@sp-ep-first-group: sp-ep-first @sp-ep-first @sp-ep-first-2x;
+@sp-ep-next-group-name: sp-ep-next;
+@sp-ep-next-group: sp-ep-next @sp-ep-next @sp-ep-next-2x;
+@sp-ep-prev-group-name: sp-ep-prev;
+@sp-ep-prev-group: sp-ep-prev @sp-ep-prev @sp-ep-prev-2x;
+@sp-foot-andy-group-name: sp-foot-andy;
+@sp-foot-andy-group: sp-foot-andy @sp-foot-andy @sp-foot-andy-2x;
+@sp-foot-fb-group-name: sp-foot-fb;
+@sp-foot-fb-group: sp-foot-fb @sp-foot-fb @sp-foot-fb-2x;
+@sp-foot-insta-group-name: sp-foot-insta;
+@sp-foot-insta-group: sp-foot-insta @sp-foot-insta @sp-foot-insta-2x;
+@sp-foot-ios-group-name: sp-foot-ios;
+@sp-foot-ios-group: sp-foot-ios @sp-foot-ios @sp-foot-ios-2x;
+@sp-foot-twit-group-name: sp-foot-twit;
+@sp-foot-twit-group: sp-foot-twit @sp-foot-twit @sp-foot-twit-2x;
+@sp-nav-android-group-name: sp-nav-android;
+@sp-nav-android-group: sp-nav-android @sp-nav-android @sp-nav-android-2x;
+@sp-nav-hatguy-group-name: sp-nav-hatguy;
+@sp-nav-hatguy-group: sp-nav-hatguy @sp-nav-hatguy @sp-nav-hatguy-2x;
+@sp-nav-ios-group-name: sp-nav-ios;
+@sp-nav-ios-group: sp-nav-ios @sp-nav-ios @sp-nav-ios-2x;
+@sp-nav-tapastic-group-name: sp-nav-tapastic;
+@sp-nav-tapastic-group: sp-nav-tapastic @sp-nav-tapastic @sp-nav-tapastic-2x;
+@retina-groups: @sp-ep-first-group @sp-ep-next-group @sp-ep-prev-group @sp-foot-andy-group @sp-foot-fb-group @sp-foot-insta-group @sp-foot-ios-group @sp-foot-twit-group @sp-nav-android-group @sp-nav-hatguy-group @sp-nav-ios-group @sp-nav-tapastic-group;
+
+/*
+The provided classes are intended to be used with the array-like variables
+
+.icon-home {
+  .sprite-width(@icon-home);
+}
+.icon-email {
+  .sprite(@icon-email);
+}
+*/
+.sprite-width(@sprite) {
+  width: extract(@sprite, 5);
+}
+
+.sprite-height(@sprite) {
+  height: extract(@sprite, 6);
+}
+
+.sprite-position(@sprite) {
+  @sprite-offset-x: extract(@sprite, 3);
+  @sprite-offset-y: extract(@sprite, 4);
+  background-position: @sprite-offset-x @sprite-offset-y;
+}
+
+.sprite-image(@sprite) {
+  @sprite-image: extract(@sprite, 9);
+  @sprite-image-bare: ~`"@{sprite-image}".slice(1, -1)`;
+  background-image: url(@sprite-image-bare);
+}
+
+.sprite(@sprite) {
+  .sprite-image(@sprite);
+  .sprite-position(@sprite);
+  .sprite-width(@sprite);
+  .sprite-height(@sprite);
+}
+
+/*
+The `retina-sprite` class sets up rules and a media query for a sprite/retina sprite.
+  It should be used with a "retina group" variable.
+
+The media query is from CSS Tricks: https://css-tricks.com/snippets/css/retina-display-media-query/
+
+@icon-home-group: 'icon-home' @icon-home @icon-home-2x;
+
+.icon-home {
+  .retina-sprite(@icon-home-group);
+}
+*/
+.sprite-background-size(@sprite) {
+  @sprite-total-width: extract(@sprite, 7);
+  @sprite-total-height: extract(@sprite, 8);
+  background-size: @sprite-total-width @sprite-total-height;
+}
+
+.retina-sprite(@retina-group) {
+  @normal-sprite: extract(@retina-group, 2);
+  @retina-sprite: extract(@retina-group, 3);
+  .sprite(@normal-sprite);
+
+  @media (-webkit-min-device-pixel-ratio: 2),
+         (min-resolution: 192dpi) {
+    .sprite-image(@retina-sprite);
+    .sprite-background-size(@normal-sprite);
+  }
+}
+
+/*
+The `.sprites` mixin generates identical output to the CSS template
+  but can be overridden inside of LESS
+
+This must be run when you have at least 2 sprites.
+  If run with a single sprite, then there will be reference errors.
+
+.sprites(@spritesheet-sprites);
+*/
+.sprites(@sprites, @i: 1) when (@i <= length(@sprites)) {
+  @sprite: extract(@sprites, @i);
+  @sprite-name: extract(@sprite, 10);
+  .@{sprite-name} {
+    .sprite(@sprite);
+  }
+  .sprites(@sprites, @i + 1);
+}
+
+/*
+The `.retina-sprites` mixin generates a CSS rule and media query for retina groups
+  This yields the same output as CSS retina template but can be overridden in LESS
+
+.retina-sprites(@retina-groups);
+*/
+.retina-sprites(@retina-groups, @i: 1) when (@i <= length(@retina-groups)) {
+  @retina-group: extract(@retina-groups, @i);
+  @sprite-name: extract(@retina-group, 1);
+  .@{sprite-name} {
+    .retina-sprite(@retina-group);
+  }
+  .retina-sprites(@retina-groups, @i + 1);
+}

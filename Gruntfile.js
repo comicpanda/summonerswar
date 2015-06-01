@@ -13,7 +13,10 @@ module.exports = function(grunt) {
         stripBanners: true
       },
       dist: {
-        src: ['resources/js/lib/jquery.js','resources/js/lib/handlebars.js','resources/js/<%= pkg.name %>.js'],
+        src: ['resources/js/lib/jquery.js',
+            'resources/js/lib/tooltip.js',
+            'resources/js/lib/handlebars.js',
+            'resources/js/<%= pkg.name %>.js'],
         dest: 'resources/js/<%= pkg.name %>.min.js'
       }
     },
@@ -30,8 +33,8 @@ module.exports = function(grunt) {
       prod: {
         options : {
           paths       : ['resources/less'],
-          compress    : true,
-          yuicompress : true
+          compress    : false,
+          yuicompress : false
         },
         files   : {
           'resources/css/style.min.css' : 'resources/less/style.less',
@@ -40,21 +43,7 @@ module.exports = function(grunt) {
     },
     jshint: {
       options: {
-        curly: true,
-        eqeqeq: true,
-        immed: true,
-        latedef: true,
-        newcap: true,
-        noarg: true,
-        sub: true,
-        undef: true,
-        unused: true,
-        boss: true,
-        eqnull: true,
-        browser: true,
-        globals: {
-          jQuery: true
-        }
+        jshintrc : '.jshintrc'
       },
       gruntfile: {
         src: 'Gruntfile.js'
@@ -65,12 +54,26 @@ module.exports = function(grunt) {
     },
     watch: {
       less: {
-          files: ['resources/less/style.less'],
-          tasks: ['less']
+        files: ['resources/less/style.less'],
+        tasks: ['less']
       },
       livereload : {
-          options: {livereload: true},
-          files: ['resources/css/style.min.css']
+        options: {livereload: true},
+        files: ['resources/css/style.min.css']
+      }
+    },
+    sprite: {
+      all: {
+        src: 'resources/img/assets/*.png',
+        retinaSrcFilter: 'resources/img/assets/*-2x.png',
+        dest: 'resources/img/sprites.png',
+        retinaDest : 'resources/img/sprites-2x.png',
+        destCss: 'resources/less/sprites.less',
+        cssSpritesheetName: 'sp',
+        padding : 2,
+        cssVarMap : function(sprite) {
+          sprite.name = 'sp-' + sprite.name;
+        }
       }
     }
   });
