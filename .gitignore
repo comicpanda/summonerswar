@@ -1,3 +1,4 @@
 node_modules/
 **/*.min.*
 contents/
+index.htm

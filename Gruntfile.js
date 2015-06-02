@@ -13,7 +13,8 @@ module.exports = function(grunt) {
         stripBanners: true
       },
       dist: {
-        src: ['resources/js/lib/jquery.js',
+        src: ['resources/js/ga.js',
+            'resources/js/lib/jquery.js',
             'resources/js/lib/tooltip.js',
             'resources/js/lib/handlebars.js',
             'resources/js/<%= pkg.name %>.js'],
@@ -75,7 +76,14 @@ module.exports = function(grunt) {
           sprite.name = 'sp-' + sprite.name;
         }
       }
-    }
+    },
+    processhtml: {
+      dist: {
+        files: {
+          'index.htm': ['index.html']
+        }
+      }
+    },
   });
 
   // These plugins provide necessary tasks.
@@ -83,5 +91,5 @@ module.exports = function(grunt) {
     if (key !== 'grunt' && key.indexOf('grunt') === 0) { grunt.loadNpmTasks(key); }
   }
   // Default task.
-  grunt.registerTask('default', ['jshint']);
+  grunt.registerTask('default', ['jshint', 'concat', 'uglify', 'sprite', 'less', 'processhtml']);
 };
