@@ -113,6 +113,7 @@ jQuery(function () {
   var $window = $(window);
   var skipScrollEvent = false;
   var currentEpIdx = 0;
+  var $episodes = $('.episode');
   $window.on('load', function () {
     setTimeout(function () {
       $('html, body').scrollTop(0);
@@ -123,7 +124,15 @@ jQuery(function () {
     $elem.data('originalTitle', '<span>' + indicator + '</span>' + title)
       .tooltip('update');
   };
-  var updateEpisodeNavs = function (selectedIdx) {
+
+  var loadImages = function() {
+    $episodes.find('.art-image').each(function(i, img){
+      var $img = $(img);
+      $img.attr('src', $img.data('src')).removeAttr('data-src');
+    });
+  };
+
+  var loadEpisode = function (selectedIdx) {
     skipScrollEvent = false;
     currentEpIdx = selectedIdx;
     $episodeList.removeClass('on')
@@ -152,6 +161,9 @@ jQuery(function () {
   };
 
   var scrollToEpisode = function (idx) {
+    if (skipScrollEvent) {
+      return;
+    }
     var $targetEl = $('#ep-' + idx),
       scrollTop = $targetEl.offset().top;
 
@@ -162,7 +174,7 @@ jQuery(function () {
     skipScrollEvent = true;
     $html.animate({scrollTop : scrollTop}, { duration : duration, easing : 'easeInOutQuad'})
       .promise().done(function () {
-        updateEpisodeNavs(idx);
+        loadEpisode(idx);
       });
   };
 
@@ -173,13 +185,13 @@ jQuery(function () {
     }).tooltip();
 
   var $episodeList = $('.go-episode').on('click', function () {
-    updateEpisodeNavs($(this).data('idx'));
+    loadEpisode($(this).data('idx'));
   });
 
   $episodeList.tooltip({container : '#smart-view'});
-  updateEpisodeNavs(0);
+  loadEpisode(0);
+  loadImages();
 
-  var $episodes = $('.episode');
   var onScroll = function() {
     if(skipScrollEvent) {
       return;
@@ -197,7 +209,7 @@ jQuery(function () {
       }
     });
 
-    updateEpisodeNavs(selectedIdx);
+    loadEpisode(selectedIdx);
   };
 
   if ($('body').hasClass('desktop')) {
