@@ -290,18 +290,25 @@ ul {
 }
 
 .m {
+    #smart-view {
+        margin-top: 0;
+    }
+    .nav {
+        position: static;
+    }
     .episode {
+        padding-top: 30px;
         max-width: 100%;
     }
-    .ep-nav {
-        display: none;
-    }
-    .store-links {
-        display: none;
+    .visible-desktop {
+        display: none !important;
     }
 }
 
 .desktop {
+    .visible-desktop {
+        display: inherit;
+    }
     .cover-section {
         height: 360px;
     }
@@ -392,8 +399,15 @@ ul {
             }
         }
     }
+    .page-footer {
+        margin-left: 50px;
+        min-width: 940px;
+    }
 }
 
+.banner img {
+    display: block;
+}
 .cover-section {
     display: block;
     max-width: 100%;
@@ -428,13 +442,13 @@ ul {
 }
 
 .page-footer {
+    width: 100%;
     z-index: 998;
-    margin-left: 50px;
-    min-width: 770px;
     position: relative;
     background-color: #222;
     color: white;
     padding: 30px 10px 10px;
+    .box-sizing;
     text-align: center;
     .social-links {
         margin-bottom: 30px;
