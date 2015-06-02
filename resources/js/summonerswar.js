@@ -111,12 +111,14 @@ $("#episodes").html(Handlebars.compile($("#tp-episodes").html())(data));
 
 jQuery(function () {
   var $window = $(window);
-  var skipScrollEvent = false;
+  var skipScrollEvent = true;
   var currentEpIdx = 0;
   var $episodes = $('.episode');
   $window.on('load', function () {
     setTimeout(function () {
       $('html, body').scrollTop(0);
+      loadImages();
+      skipScrollEvent = false;
     }, 0);
   });
   var $html = $('html, body');
@@ -126,7 +128,7 @@ jQuery(function () {
   };
 
   var loadImages = function() {
-    $episodes.find('.art-image').each(function(i, img){
+    $episodes.find('.art-image[data-src]').each(function(i, img){
       var $img = $(img);
       $img.attr('src', $img.data('src')).removeAttr('data-src');
     });
@@ -190,7 +192,6 @@ jQuery(function () {
 
   $episodeList.tooltip({container : '#smart-view'});
   loadEpisode(0);
-  loadImages();
 
   var onScroll = function() {
     if(skipScrollEvent) {
