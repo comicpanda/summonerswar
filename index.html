@@ -115,10 +115,10 @@ An original story based off the hit game, Summoner's War.">
             <article class="ep-contents">
                 {{#each images}}
                   {{#if @../first}}
-                  <img class="art-image" src="resources/img/contents/{{this}}" alt="{{../title}} - image"/>
+                  <img class="art-image" src="resources/img/contents/{{this}}" alt="{{../../title}} - image"/>
                   {{else}}
                   <img class="art-image" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-                    data-src="resources/img/contents/{{this}}" alt="{{../title}} - image"/>
+                    data-src="resources/img/contents/{{this}}" alt="{{../../title}} - image"/>
                   {{/if}}
                 {{/each}}
             </article>
